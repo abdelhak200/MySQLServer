@@ -1,11 +1,14 @@
 pipeline {
-  agent any
-  stages {
-    stage('UP') {
-      steps {
-        sh 'docker-compose up -d'
-      }
+    agent any
+    environment {
+        COMPOSE_PROJECT_NAME = "${env.JOB_NAME}-${env.BUILD_ID}"
     }
-
-  }
+    stages {
+        ....  your stages go here ....
+    }
+    post {
+        always {
+            sh "docker-compose up"
+        }
+    }
 }
