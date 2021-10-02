@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8.0.26
+    container_name: MySQLServer
+    environment:
+      MYSQL_ROOT_PASSWORD: Abdelhak2009$
+      MYSQL_DATABASE: HomeBankDB
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Abdelhak2009
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/HomeBankDB:/var/lib/mysql
