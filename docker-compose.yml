@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   db:
-    image: MySQLServer
+    image: abdelhak2019/hug:MySQLServer
     restart: always
     environment:
       MYSQL_DATABASE: 'HomeBankDB'
@@ -18,6 +18,3 @@ services:
 # Names our volume
 volumes:
   my-HBdb:
-  
-  
-  
