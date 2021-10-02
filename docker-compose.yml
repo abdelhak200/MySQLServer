@@ -12,4 +12,4 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - C:/data/HomeBankDB:/var/lib/mysql
+      - /data/HomeBankDB:/var/lib/mysql
