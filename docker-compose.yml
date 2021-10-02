@@ -1,15 +1,23 @@
-version: '3'
-
+version: '3.3'
 services:
   db:
-    image: mysql:latest
-    container_name: MySQLServer
+    image: MySQLServer
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: Abdelhak2009$
-      MYSQL_DATABASE: HomeBankDB
-      MYSQL_USER: root
-      MYSQL_PASSWORD: Abdelhak2009
+      MYSQL_DATABASE: 'HomeBankDB'
+      MYSQL_USER: 'admin'
+      MYSQL_PASSWORD: 'Abdelhak2009'
+      MYSQL_ROOT_PASSWORD: 'Abdelhak2009'
     ports:
-      - "3306:3306"
+      - '3306:3306'
+    expose:
+      - '3306'
+      # Where our data will be persisted
     volumes:
-      - /data/HomeBankDB:/var/lib/mysql
+      - my-HBdb:/var/lib/mysql
+# Names our volume
+volumes:
+  my-HBdb:
+  
+  
+  
