@@ -1,7 +1,7 @@
 pipeline {
   agent {
     dockerfile {
-      filename 'docker-compose'
+      filename 'C:\\windows\\system32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\MySQLServer1_master\\docker-compose'
     }
 
   }
